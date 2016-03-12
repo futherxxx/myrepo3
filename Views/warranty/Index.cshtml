@@ -1,0 +1,75 @@
+﻿@model IEnumerable<PCDetailsWeb.Models.tblwarranty>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tblstatus.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblsystem.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblvendor.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.assignedto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.configdate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.preparedby)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateofpurchase)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.warrantyexpiration)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblstatus.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblsystem.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblvendor.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.assignedto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.configdate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.preparedby)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateofpurchase)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.warrantyexpiration)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

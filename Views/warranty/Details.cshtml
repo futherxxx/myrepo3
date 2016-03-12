@@ -1,0 +1,82 @@
+﻿@model PCDetailsWeb.Models.tblwarranty
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblwarranty</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tblstatus.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblstatus.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblsystem.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblsystem.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblvendor.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblvendor.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.assignedto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assignedto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.configdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.configdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.preparedby)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.preparedby)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateofpurchase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateofpurchase)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.warrantyexpiration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.warrantyexpiration)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

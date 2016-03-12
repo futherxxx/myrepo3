@@ -1,0 +1,66 @@
+﻿@model PCDetailsWeb.Models.tbldesktop
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tbldesktop</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tblkeyboard.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblkeyboard.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblmonitor.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblmonitor.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblmouse.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblmouse.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblpowerpack.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblpowerpack.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblsystem.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblsystem.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

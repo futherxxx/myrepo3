@@ -1,0 +1,112 @@
+﻿@model PCDetailsWeb.Models.tblsystem
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tblsystem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tblsystem2.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblsystem2.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblvendor.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblvendor.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.model)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.serialno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.serialno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.processor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.processor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.memory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.memory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hdd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hdd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dvdcd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dvdcd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.operational)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.operational)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

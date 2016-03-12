@@ -1,0 +1,106 @@
+﻿@model PCDetailsWeb.Models.tblsystem
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblsystem</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tblsystem2.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblsystem2.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblvendor.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblvendor.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.model)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.serialno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.serialno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.processor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.processor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.memory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.memory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hdd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hdd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dvdcd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dvdcd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.operational)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.operational)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

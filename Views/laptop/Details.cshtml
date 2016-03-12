@@ -1,0 +1,34 @@
+﻿@model PCDetailsWeb.Models.tbllaptop
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tbllaptop</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tblbattery.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblbattery.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblsystem.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblsystem.name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,93 @@
+﻿@model IEnumerable<PCDetailsWeb.Models.tblsystem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tblsystem2.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblvendor.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.serialno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.processor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.memory)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hdd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dvdcd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.operational)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblsystem2.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblvendor.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.serialno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.processor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.memory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hdd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dvdcd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.operational)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

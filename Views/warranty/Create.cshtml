@@ -1,0 +1,97 @@
+﻿@model PCDetailsWeb.Models.tblwarranty
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>tblwarranty</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.fksystem, "fksystem", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("fksystem", String.Empty)
+                @Html.ValidationMessageFor(model => model.fksystem)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.assignedto, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.assignedto)
+                @Html.ValidationMessageFor(model => model.assignedto)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.configdate, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.configdate)
+                @Html.ValidationMessageFor(model => model.configdate)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.preparedby, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.preparedby)
+                @Html.ValidationMessageFor(model => model.preparedby)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.dateofpurchase, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.dateofpurchase)
+                @Html.ValidationMessageFor(model => model.dateofpurchase)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.warrantystatus, "warrantystatus", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("warrantystatus", String.Empty)
+                @Html.ValidationMessageFor(model => model.warrantystatus)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.warrantyexpiration, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.warrantyexpiration)
+                @Html.ValidationMessageFor(model => model.warrantyexpiration)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.fkvendor, "fkvendor", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("fkvendor", String.Empty)
+                @Html.ValidationMessageFor(model => model.fkvendor)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

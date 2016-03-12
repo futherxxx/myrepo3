@@ -1,0 +1,63 @@
+﻿@model IEnumerable<PCDetailsWeb.Models.tbldesktop>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tblkeyboard.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblmonitor.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblmouse.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblpowerpack.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblsystem.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblkeyboard.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblmonitor.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblmouse.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblpowerpack.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblsystem.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

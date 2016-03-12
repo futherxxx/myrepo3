@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - PC Details</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid body-content">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+                    <li>@Html.ActionLink("Battery Management", "Index", "battery")</li>
+                    <li>@Html.ActionLink("Keyboard Management", "Index", "keyboard")</li>
+                    <li>@Html.ActionLink("OS Management", "Index", "os")</li>
+                    <li>@Html.ActionLink("Office Software Management", "Index", "office")</li>
+                    <li>@Html.ActionLink("Monitor Management", "Index", "monitor")</li>
+                    <li>@Html.ActionLink("UPS Management", "Index", "ups")</li>
+                    <li>@Html.ActionLink("Mouse Management", "Index", "mouse")</li>
+                    <li>@Html.ActionLink("System Management", "Index", "system")</li>
+                    <li>@Html.ActionLink("Powerpack Management", "Index", "powerpack")</li>
+                    <li>@Html.ActionLink("Network Management", "Index", "network")</li>
+                    <li>@Html.ActionLink("Software Management", "Index", "software")</li>
+                    <li>@Html.ActionLink("Desktop Management", "Index", "desktop")</li>
+                    <li>@Html.ActionLink("Laptop Management", "Index", "laptop")</li>
+                    <li>@Html.ActionLink("Status Management", "Index", "status")</li>
+                    <li>@Html.ActionLink("Department Management", "Index", "dept")</li>
+                    <li>@Html.ActionLink("Warranty Management", "Index", "warranty")</li>
+                </ul>
+            </div>
+            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                @RenderBody()
+            </div>
+
+
+        </div>
+    </div>
+    <hr />
+    <footer>
+        <p align="center">&copy; @DateTime.Now.Year -  PC Details Application</p>
+    </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
